@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="logInPage" class="card">
+            <div class="header">
+                <h1>Task Manager</h1>
+                <p>Organize your tasks efficiently</p>
+            </div>
+
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" class="form-control" placeholder="Enter your username">
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" class="form-control" placeholder="Enter your password">
+            </div>
+
+            <button id="logIn" class="btn btn-primary">Log In</button>
+            <button id="register" class="btn btn-secondary">Create Account</button>
+
+            <div class="divider">
+                <span>OR</span>
+            </div>
+
+            <div class="theme-toggle">
+                <span class="themeText">Dark Mode</span>
+                <label class="switch">
+                    <input type="checkbox" id="theme-login">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </div>
+
+        <div id="app" class="card hidden">
+            <div class="app-header">
+                <h2 class="app-title">Task Manager</h2>
+                <button id="logout" class="logout-btn">Logout</button>
+            </div>
+
+            <div class="theme-toggle" style="justify-content: flex-end; margin-bottom: 20px;">
+                <label class="switch">
+                    <input type="checkbox" id="theme-app">
+                    <span class="slider"></span>
+                </label>
+                <span class="themeText">Dark Mode</span>
+            </div>
+
+            <div class="task-controls">
+                <div class="task-input">
+                    <input type="text" id="task" class="form-control" placeholder="Add a new task...">
+                </div>
+                <button id="add" class="btn btn-primary" style="width: auto; padding: 14px 20px;">Add</button>
+            </div>
+
+            <div class="status-options">
+                <div class="status-option">
+                    <input type="radio" id="high" name="status" value="high">
+                    <label for="high">High Priority</label>
+                </div>
+                <div class="status-option">
+                    <input type="radio" id="medium" name="status" value="medium">
+                    <label for="medium">Medium Priority</label>
+                </div>
+                <div class="status-option">
+                    <input type="radio" id="low" name="status" value="low">
+                    <label for="low">Low Priority</label>
+                </div>
+            </div>
+
+            <div class="filter-bar">
+                <div class="filter-search">
+                    <input type="text" id="search" class="form-control" placeholder="Search tasks...">
+                </div>
+                <div class="filter-status">
+                    <select id="statusView" class="form-control">
+                        <option value="all">All Tasks</option>
+                        <option value="high">High Priority</option>
+                        <option value="medium">Medium Priority</option>
+                        <option value="low">Low Priority</option>
+                    </select>
+                </div>
+            </div>
+
+            <ul id="list"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
